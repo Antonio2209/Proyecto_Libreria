@@ -1,0 +1,283 @@
+<!--
+Santiago Aguirre Restrepo
+
+Pablo Cadena Patiño
+
+Juan Felipe Torres
+
+Luis Antonio Ramirez-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="libreria.css">
+    <title>LIBRERIA PULGUERO</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LIBRERIA PULGUERO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="catalogo.html">Catalogo</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="contacto.html">Contacto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                        href="Inicio_sesion.html">Cerrar Sesion</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+        <div>
+            <a href="#"><img src="carrito.png" style="width: 40px;" alt="carrito de compras"><span
+                    id="cuenta-carrito">0</span></a>
+        </div>
+    </nav>
+    <div class="mt-4 p-5 bg-secondary text-white rounded">
+        <h1 class="catalogo">Catalogo de libros</h1>
+        <p class="catalogo">El mundo maravilloso de la lectura</p>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="card" style="width: 18rem;">
+                <img src="EdgarAllanPoe.jpeg" class="card-img-top" alt="..." style="height: 21rem">
+                <div class="card-body">
+                    <h5 class="card-title">Edgar Allan Poe</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        La obra de Edgar Allan Poe destaca por una serie de aciertos brillantes, que en ocasiones, son
+                        fruto de su condición de visionario descontrolado y en otras de su faceta como periodista y
+                        observador de la época.
+                    </div>
+                    <p class="card-text">$150.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="perfume.jpeg" class="card-img-top" alt="..." style="height: 21rem;">
+                <div class="card-body">
+                    <h5 class="card-title">El Perfume</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        Narra la vida de Jean-Baptiste Grenouille, «uno de los hombres más geniales y abominables de su
+                        época», que su autor ubica en la Francia del siglo XVIII. Desde su nacimiento, Grenouille
+                        descubre y percibe el mundo a través del sentido del olfato, que tiene más desarrollado que el
+                        resto de las personas.
+                    </div>
+                    <p class="card-text">$100.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="SeñorAnillos.jpeg" class="card-img-top" alt="..." style="height: 21rem">
+                <div class="card-body">
+                    <h5 class="card-title">Señor de los Anillos</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        La novela narra el viaje del protagonista principal, Frodo Bolsón, hobbit de la Comarca, para
+                        destruir el Anillo Único y la consiguiente guerra que provocará el enemigo para recuperarlo, ya
+                        que es la principal fuente de poder de su creador, el señor oscuro Sauron.
+                    </div>
+                    <p class="card-text">$20000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="card" style="width: 18rem;">
+                <img src="ChicaGris.jpeg" class="card-img-top" alt="..." style="height: 21rem">
+                <div class="card-body">
+                    <h5 class="card-title">La Chica de Gris</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        Isaac Zarco, periodista e investigador de sucesos paranormales, no está pasando por su mejor
+                        momento. La muerte de su padre le ha afectado profundamente y ha acelerado su ruptura con
+                        Cosette, el amor de su vida. Fruto de esta profunda crisis duda de si sus habilidades psíquicas
+                        han sido reales alguna vez.
+                    </div>
+                    <p class="card-text">$60.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="Tsubasa.jpeg" class="card-img-top" alt="..." style="height: 21rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Tsubasa</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        Tsubasa Ozora es un estudiante de primaria que sabe muy bien lo que quiere: ser uno de los
+                        mejores jugadores de futbol en todo el mundo. Para lograrlo, su constancia, esfuerzo y talento
+                        serán cruciales.
+                    </div>
+                    <p class="card-text">$50.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="nacho.jpg" class="card-img-top" alt="..." style="height: 21rem">
+                <div class="card-body">
+                    <h5 class="card-title">Nacho</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        Nacho es un libro muy valioso que ha sido usado por décadas en America Latina para ayudar en la
+                        hermosa labor de iniciar al niño (a) en el maravilloso camino de la lectura y escritura. En las
+                        páginas iniciales, el niño (a) traza las líneas fundamentales que empleará en la escritura,
+                        desarrollando así su sicomotricidad.
+                    </div>
+                    <p class="card-text">$20000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="card" style="width: 18rem;">
+                <img src="Mario Benedetti.jpeg" class="card-img-top" alt="..." style="height: 21rem">
+                <div class="card-body">
+                    <h5 class="card-title">Vivir adrede</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        A traves de planteamientos como estos, Vivir adrede reflexiona sobre la vida. La vida de los que
+                        aman y los que matan; de los que creen en Dios o le dicen "adiós"; de los que abrazan y de los
+                        que oprimen; del condenado a muerte y de aquellos cuya existencia es la condena.
+                    </div>
+                    <p class="card-text">$100.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="Terror.jpeg" class="card-img-top" alt="..." style="height: 21rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Terror</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        La novela de terror es un subgénero dentro de la novela, que es a su vez un subgénero de la
+                        épica o narrativa. Su principal característica y rasgo distintivo es el cultivo del miedo y sus
+                        emociones asociadas como principal objetivo literario.
+                    </div>
+                    <p class="card-text">$160.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="Dracula.jpeg" class="card-img-top" alt="..." style="height: 21rem">
+                <div class="card-body">
+                    <h5 class="card-title">Drácula</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        La novela, escrita de forma epistolar a modo de diarios y con pequeños saltos en el tiempo narra
+                        la desmesurada ambición de poder de Drácula, un hombre solitario, cultivado, aristocrático y
+                        terriblemente terrorífico que vive aislado en un castillo decadente y que se traslada a Londres
+                        para conseguir sus fines.
+                    </div>
+                    <p class="card-text">$20000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="d-flex justify-content-between">
+            <div class="card" style="width: 18rem;">
+                <img src="CienAnosSol.jpeg" class="card-img-top" alt="..." style="height: 21rem">
+                <div class="card-body">
+                    <h5 class="card-title">Cien años de soledad</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        "Cien años de soledad" es una novela del escritor colombiano Gabriel García Márquez. Relata la
+                        historia de la familia Buendía en el pueblo ficticio de Macondo, explorando temas de soledad,
+                        amor y el paso del tiempo.
+                    </div>
+                    <p class="card-text">$250.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="LoQueElViento.jpeg" class="card-img-top" alt="..." style="height: 21rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Lo que el viento se llevo</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        El libro relata la historia de una mujer rebelde de Georgia llamada Scarlett OHara, y sus
+                        relaciones con los amigos, familia y amores en medio de la rebelión del sur, la guerra civil
+                        americana, y el período de la reconstrucción.
+                    </div>
+                    <p class="card-text">$170.000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="MujerDormida.jpeg" class="card-img-top" alt="..." style="height: 21rem">
+                <div class="card-body">
+                    <h5 class="card-title">La isla de la mujer dormida</h5>
+                    <button class="toggle-btn" onclick="toggleDescription(this)">Ver descripción</button>
+
+                    <div class="description">
+                        En la base de operaciones, una pequeña isla del mar Egeo, la vida del corsario español se
+                        cruzará en turbio triángulo con la de los propietarios, el barón Katelios y su esposa: una
+                        seductora mujer madura que busca, con fría desesperación, el modo de escapar a su destino.
+                    </div>
+                    <p class="card-text">$250000</p>
+                    <button class="btn btn-primary" onclick="agregarProducto()">Agregar al carrito</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="libreria.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/*
+Santiago Aguirre Restrepo
+
+Pablo Cadena Patiño
+
+Juan Felipe Torres
+
+Luis Antonio Ramirez */
+
+
+body{
+    background-color:rgb(16, 14, 12);
+}
+
+.mensaje{
+    background-color: #262929;
+}
+.nav-link:hover{
+    margin: 0 15px;
+    background-color: #690776;
+}
+
+.fotografia{
+    height: 400px;
+    align-items: center;
+    
+}
+
+
+
+.bienvenido{
+    text-align: center;
+    font-size: 60px;
+    
+}
+.prbienvenida{
+    text-align: center;
+    font-size: 22px;
+    border: 2px solid #7c0893;
+    width: 1000px;
+    margin-left: 100px;
+}
+
+.card{
+    background-color: #05d9fa;
+    border: 10px solid #7c0893;
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 20px;
+    
+}
+
+
+.catalogo{
+    text-align: center;
+}
+
+.btn-primary:hover{
+    background-color: #ab03be;
+    
+}
+
+.description {
+    display: none; /* Oculto por defecto */
+    font-size: 0.9em;
+    color: white;
+    margin-top: 10px;
+}
+
+.toggle-btn:hover{
+    background-color: #ff00ee;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 2px solid #ab109e; /* Borde de 2px en azul */
+    border-radius: 4px; /* Bordes redondeados */;
+    
+}
+
+.toggle-btn:focus {
+    border-color: 40px #7b0460; /* Cambia el color del borde */
+    border-radius: 20px;
+    border: 2px solid #007bff; /* Borde de 2px en azul */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer;
+    box-shadow: 5px 5px 5px rgba(29, 7, 193, 0.5); /* Agrega una sombra azul */
+    outline: none ;
+}
+
+.btn-primary:hover{
+    background-color: #4d033d;
+}
+
+.cinco{
+    font-size: 20px;
+}
+
+.informacion{
+    margin-top:-465px;
+    font-size: 30px;
+    margin-left: 380px;
+    color: white;
+
+}
+
+.md-3{
+    margin-top: 100px;
+    margin-left: 5px;
+}
+.mapa{
+    margin-top: -358px;
+    margin-left: 400px;
+    font-size: 30px;
+}
+
+.error {
+    color: red;
+    font-size: 10;
+}
+#cuenta-carrito{
+    color: white;
+}

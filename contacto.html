@@ -1,0 +1,214 @@
+<!--
+Santiago Aguirre Restrepo
+
+Pablo Cadena Patiño
+
+Juan Felipe Torres
+
+Luis Antonio Ramirez-->
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="libreria.css">
+    <title>LIBRERIA PULGUERO</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">LIBRERIA PULGUERO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="inicio.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="catalogo.html">Catalogo</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="contacto.html">Contacto</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                            href="Inicio_sesion.html">Cerrar Sesion</a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div class="mt-4 p-5 bg-secondary text-white rounded">
+        <h1 class="contacto">Formulario de contacto</h1>
+    
+        <form class="row g-3 needs-validation" id="contactForm" novalidate>
+            <div class="col-md-4">
+                <label for="validationCustom01" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Ingrese su nombre" required>
+                <span class="error" id="errorNombre"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustom02" class="form-label">Apellido</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Ingrese su apellido" required>
+                <span class="error" id="errorApellido"></span>
+            </div>
+            <div class="col-md-4">
+                <label for="validationCustomUsername" class="form-label">Correo</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                    <input type="email" class="form-control" id="validationCustomUsername"
+                        aria-describedby="inputGroupPrepend" placeholder="Ingrese su correo" required>
+                    <span class="error" id="errorEmail"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="validationCustom03" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Ingrese su Ciudad" required>
+                <span class="error" id="errorCiudad"></span>
+            </div>
+            <div class="col-md-3">
+                <label for="validationCustom04" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="Ingrese su Dirección" required>
+                <span class="error" id="errorDireccion"></span>
+            </div>
+            
+            <div class="md-3">
+                <label for="comentarios">Comentarios adicionales:</label><br>
+                <textarea class="cinco" id="comentarios" cols="30" rows="10" placeholder="Profe ponganos 5.0"></textarea>
+            </div>
+    
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                        Acepta términos y condiciones.
+                    </label>
+                    <div class="invalid-feedback">
+                        Debes aceptar los términos antes de enviar.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Enviar Formulario</button>
+            </div>
+        </form>
+    </div>
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();  // Evita el envío del formulario para validar primero
+        let errores = true;
+        
+        // Validación de nombre
+        const nombre = document.getElementById("validationCustom01").value;
+        let longNombre = nombre.length;
+        if  (longNombre === 0 || longNombre < 3) {
+            document.getElementById("errorNombre").innerText = "El nombre es requerido y debe llevar minimo 3 caracteres.";
+            errores = false;
+        } else {
+            document.getElementById("errorNombre").innerText = "";
+        }
+
+        // Validación de apellido
+        const apellido = document.getElementById("validationCustom02").value;
+        let longApellido = apellido.length;
+        if  (longApellido === 0 || longApellido < 3) {
+            document.getElementById("errorApellido").innerText = "El apellido es requerido y debe llevar minimo 3 caracteres.";
+            errores = false;
+        } else {
+            document.getElementById("errorApellido").innerText = "";
+        }
+
+        // Validación de correo
+        const email = document.getElementById("validationCustomUsername");
+        const emailPattern = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        if (!emailPattern.test(email.value)) {
+            document.getElementById("errorEmail").innerText = "Ingrese un correo válido.";
+            errores = false;
+        } else {
+            document.getElementById("errorEmail").innerText = "";
+        }
+
+        // Validación de ciudad
+        const ciudad = document.getElementById("validationCustom03").value;
+        let longCiudad = ciudad.length;
+        if  (longCiudad === 0 || longCiudad < 3) {
+            document.getElementById("errorCiudad").innerText = "La ciudad es requerida y debe llevar minimo 3 caracteres.";
+            errores = false;
+        } else {
+            document.getElementById("errorCiudad").innerText = "";
+        }
+
+        // Validación de dirección
+        const direccion = document.getElementById("validationCustom04");
+        if (direccion.value.trim() === "") {
+            document.getElementById("errorDireccion").innerText = "La dirección es requerida.";
+            errores = false;
+        } else {
+            document.getElementById("errorDireccion").innerText = "";
+        }
+
+        // Verificar si el checkbox está marcado
+        const check = document.getElementById("invalidCheck");
+        if (!check.checked) {
+            check.nextElementSibling.innerText = "Debes aceptar los términos y condiciones.";
+            errores = false;
+        } else {
+            check.nextElementSibling.innerText = "";
+        }
+
+        // Enviar el formulario si es válido
+        if (errores) {
+            this.submit();
+            alert("El formulario se ha enviado exitosamente")
+        }
+    });
+</script>
+    <div class="informacion" text-align="center">
+        <h2>Informacion de Contacto</h2>
+        Telefono: 316545646 <br>
+        Direccion: Calle falsa 123
+        <br>
+        <br>
+        <h3>Redes Sociales</h3>
+        Facebook: Facebook.com
+        <br>
+        <br>
+        Instagram: Instagram.com
+    <div class="mapa">
+        <h3>Nuestra Ubicación</h3>
+        
+        
+            <!-- Código de inserción de Google Maps -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d9920.416651763766!2d-76.2400046368332!3d3.4210973938681772!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3a11bdfb50a6cd%3A0x70b2355e55eb1989!2sPradera%20Valle%20Parque%20principal!5e0!3m2!1sen!2sco!4v1730591655698!5m2!1sen!2sco" 
+        width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        
+        </iframe>
+    </div>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
